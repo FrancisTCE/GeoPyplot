@@ -5,6 +5,6 @@ def getScreenWidthPadded(root, pad):
 
 
 def getScreenHeightPadded(root, pad):
-    if (root.winfo_screenheight() * pad)> 1080:
+    if (root.winfo_screenheight() * pad) > 1080:
         return str(int((root.winfo_screenheight() * pad) / 2))
     return str(int(root.winfo_screenheight() * pad))
