@@ -27,12 +27,12 @@ if __name__ == '__main__':
                                  text='1',
                                  fg='white',
                                  font=('Helvetica', 20)
-                                 ).place(x=int(20),
+                                 ).place(x=int(10),
                                          y=int(102)
                                          )
 
     point1_text_box = tk.Text(window,
-                              width = 30,
+                              width = 40,
                               height = 1,
                               bg = 'white',
                               fg = 'black',
@@ -46,13 +46,13 @@ if __name__ == '__main__':
                                  text='2',
                                  fg='white',
                                  font=('Helvetica', 20)
-                                 ).place(x=int(20),
+                                 ).place(x=int(10),
                                          y=int(152)
                                          )
 
 
     point2_text_box = tk.Text(window,
-                              width=30,
+                              width=40,
                               height=1,
                               bg='white',
                               fg='black',
@@ -66,13 +66,13 @@ if __name__ == '__main__':
                                  text='3',
                                  fg='white',
                                  font=('Helvetica', 20)
-                                 ).place(x=int(20),
+                                 ).place(x=int(10),
                                          y=int(202)
                                          )
 
 
     point3_text_box = tk.Text(window,
-                              width=30,
+                              width=40,
                               height=1,
                               bg='white',
                               fg='black',
@@ -86,6 +86,6 @@ if __name__ == '__main__':
                               bg='white',
                               fg='black',
                               font = ('Helvetica', 15)
-                              ).place(x=200, y=250)
+                              ).place(x=40, y=250)
 
     window.mainloop()
