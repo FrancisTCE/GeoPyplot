@@ -22,13 +22,13 @@ def submit():
     print('\n' + p1 + '\n' + p2 + '\n' + p3)
 
 
-point1_label = tk.Label(root, text='GPS Point 1: ', font=('Helvetica', 16, 'bold'))
-point2_label = tk.Label(root, text='GPS Point 2: ', font=('Helvetica', 16, 'bold'))
-point3_label = tk.Label(root, text='GPS Point 3: ', font=('Helvetica', 16, 'bold'))
+point1_label = tk.Label(root, text=' GPS Point 1: ', font=('Helvetica', 16, 'bold'))
+point2_label = tk.Label(root, text=' GPS Point 2: ', font=('Helvetica', 16, 'bold'))
+point3_label = tk.Label(root, text=' GPS Point 3: ', font=('Helvetica', 16, 'bold'))
 point1_entry = tk.Entry(root, width=40, justify='center', textvariable=point1, font=('Helvetica', 16, 'normal'))
 point2_entry = tk.Entry(root, width=40, justify='center', textvariable=point2, font=('Helvetica', 16, 'normal'))
 point3_entry = tk.Entry(root, width=40, justify='center', textvariable=point3, font=('Helvetica', 16, 'normal'))
-sub_btn = tk.Button(root, width=57, text='Submit', command=submit)
+sub_btn = tk.Button(root, width=15, text='Submit', font=('Helvetica', 16, 'bold'), command=submit)
 point1_label.grid(row=0, column=0, padx=10, pady=5)
 point2_label.grid(row=1, column=0, padx=10, pady=5)
 point3_label.grid(row=2, column=0, padx=10, pady=5)
