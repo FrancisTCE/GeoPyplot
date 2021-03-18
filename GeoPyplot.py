@@ -7,6 +7,7 @@ def getScreenHeightPadded(pad):
     return str(window.winfo_screenheight() * pad).split('.')[0]
 
 if __name__ == '__main__':
+
     window = tk.Tk()
     window.title("GeoPyplot")
     w = getScreenWidthPadded(0.7)
@@ -31,16 +32,15 @@ if __name__ == '__main__':
                                          y=int(102)
                                          )
 
-    point1_text_box = tk.Text(window,
+    point1_text_box = tk.Entry(window,
                               width = 40,
-                              height = 1,
                               bg = 'white',
                               fg = 'black',
+                              justify = 'center',
                               font = ('Helvetica' , 20)
                               ).place(x=int(40),
                                       y=int(100)
                                       )
-
 
     points2_text_label = tk.Label(window,
                                  text='2',
@@ -50,17 +50,15 @@ if __name__ == '__main__':
                                          y=int(152)
                                          )
 
-
-    point2_text_box = tk.Text(window,
-                              width=40,
-                              height=1,
-                              bg='white',
-                              fg='black',
-                              font=('Helvetica', 20)
+    point2_text_box = tk.Entry(window,
+                              width = 40,
+                              bg = 'white',
+                              fg = 'black',
+                              justify = 'center',
+                              font = ('Helvetica', 20)
                               ).place(x=int(40),
                                       y=int(150)
                                       )
-
 
     points3_text_label = tk.Label(window,
                                  text='3',
@@ -70,13 +68,12 @@ if __name__ == '__main__':
                                          y=int(202)
                                          )
 
-
-    point3_text_box = tk.Text(window,
-                              width=40,
-                              height=1,
-                              bg='white',
-                              fg='black',
-                              font=('Helvetica', 20)
+    point3_text_box = tk.Entry(window,
+                              width = 40,
+                              bg = 'white',
+                              fg = 'black',
+                              justify = 'center',
+                              font = ('Helvetica', 20)
                               ).place(x=int(40),
                                       y=int(200)
                                       )
