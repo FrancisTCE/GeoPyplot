@@ -1,8 +1,10 @@
-import tkinter as tk
+def getScreenWidthPadded(root, pad):
+    if ((root.winfo_screenwidth() * pad) > 1920):
+        return str(int((root.winfo_screenwidth() * pad) / 2))
+    return str(int(root.winfo_screenwidth() * pad))
 
-def getScreenWidthPadded(root,pad):
-    return str(root.winfo_screenwidth() * pad).split('.')[0]
 
-
-def getScreenHeightPadded(root,pad):
-    return str(root.winfo_screenheight() * pad).split('.')[0]
+def getScreenHeightPadded(root, pad):
+    if (root.winfo_screenheight() * pad)> 1080:
+        return str(int((root.winfo_screenheight() * pad) / 2))
+    return str(int(root.winfo_screenheight() * pad))
