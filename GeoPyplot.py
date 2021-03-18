@@ -1,88 +1,43 @@
 import tkinter as tk
+import GPAPI as API
 
-def getScreenWidthPadded(pad):
-    return str(window.winfo_screenwidth() * pad).split('.')[0]
+# GUI
+root = tk.Tk()
+root.title('GeoPyplot')
+#w = API.getScreenWidthPadded(root,0.7)
+#h = API.getScreenHeightPadded(root,0.6)
+#resolution = w + 'x' + h
+# set resolution of window
+root.geometry('1280x960')
 
-def getScreenHeightPadded(pad):
-    return str(window.winfo_screenheight() * pad).split('.')[0]
+point1 = tk.StringVar()
+point2 = tk.StringVar()
+point3 = tk.StringVar()
 
-if __name__ == '__main__':
+def submit():
+    p1 = point1.get()
+    p2 = point2.get()
+    p3 = point3.get()
+    print('\n'+p1+'\n'+p2+'\n'+p3)
 
-    window = tk.Tk()
-    window.title("GeoPyplot")
-    w = getScreenWidthPadded(0.7)
-    h = getScreenHeightPadded(0.6)
-    resolution = w + 'x' + h
-    # set resolution of window
-    window.geometry(resolution)
+point1_label = tk.Label(root, text='GPS Point 1: ', font=('Helvetica', 16, 'bold'))
+point2_label = tk.Label(root, text='GPS Point 2: ', font=('Helvetica', 16, 'bold'))
+point3_label = tk.Label(root, text='GPS Point 3: ', font=('Helvetica', 16, 'bold'))
+point1_entry = tk.Entry(root, width=40, justify='center', textvariable=point1, font=('Helvetica', 16, 'normal'))
+point2_entry = tk.Entry(root, width=40, justify='center',  textvariable=point2, font=('Helvetica', 16, 'normal'))
+point3_entry = tk.Entry(root, width=40, justify='center',  textvariable=point3, font=('Helvetica', 16, 'normal'))
+sub_btn = tk.Button(root, width=57, text='Submit', command=submit)
+point1_label.grid(row=0,column=0,padx=10,pady=5)
+point2_label.grid(row=1,column=0,padx=10,pady=5)
+point3_label.grid(row=2,column=0,padx=10,pady=5)
+point1_entry.grid(row=0,column=2,padx=10,pady=5)
+point2_entry.grid(row=1,column=2,padx=10,pady=5)
+point3_entry.grid(row=2,column=2,padx=10,pady=5)
+sub_btn.grid(row=3, column=2)
+# END GUI
 
-    points_text_label = tk.Label(window,
-                                 text = 'GPS Coordenates',
-                                 fg = 'white',
-                                 font=('Helvetica', 20)
-                                 ).place(x = int(165),
-                                         y = int(60)
-                                         )
 
-    points1_text_label = tk.Label(window,
-                                 text='1',
-                                 fg='white',
-                                 font=('Helvetica', 20)
-                                 ).place(x=int(10),
-                                         y=int(102)
-                                         )
 
-    point1_text_box = tk.Entry(window,
-                              width = 40,
-                              bg = 'white',
-                              fg = 'black',
-                              justify = 'center',
-                              font = ('Helvetica' , 20)
-                              ).place(x=int(40),
-                                      y=int(100)
-                                      )
 
-    points2_text_label = tk.Label(window,
-                                 text='2',
-                                 fg='white',
-                                 font=('Helvetica', 20)
-                                 ).place(x=int(10),
-                                         y=int(152)
-                                         )
 
-    point2_text_box = tk.Entry(window,
-                              width = 40,
-                              bg = 'white',
-                              fg = 'black',
-                              justify = 'center',
-                              font = ('Helvetica', 20)
-                              ).place(x=int(40),
-                                      y=int(150)
-                                      )
-
-    points3_text_label = tk.Label(window,
-                                 text='3',
-                                 fg='white',
-                                 font=('Helvetica', 20)
-                                 ).place(x=int(10),
-                                         y=int(202)
-                                         )
-
-    point3_text_box = tk.Entry(window,
-                              width = 40,
-                              bg = 'white',
-                              fg = 'black',
-                              justify = 'center',
-                              font = ('Helvetica', 20)
-                              ).place(x=int(40),
-                                      y=int(200)
-                                      )
-
-    submit_button = tk.Button(window,
-                              text = "  Submit  ",
-                              bg='white',
-                              fg='black',
-                              font = ('Helvetica', 15)
-                              ).place(x=40, y=250)
-
-    window.mainloop()
+root.mainloop()
