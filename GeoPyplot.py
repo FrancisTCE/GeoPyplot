@@ -22,7 +22,7 @@ def submit():
     p1 = point1.get()
     p2 = point2.get()
     p3 = point3.get()
-    print('\n' + p1 + '\n' + p2 + '\n' + p3)
+    API.run(p1, p2, p3)
 
 
 # labels
