@@ -4,8 +4,7 @@ GeoPyplot is a python geo elevation tool using open elevation api. This tool map
 
 # requires python 3.8
 
-pip install matplotlib
-pip install xlsxwriter
+pip install matplotlib xlsxwriter
 
 # cmd to run: python3 GeoPyplot.py
 
