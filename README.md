@@ -2,8 +2,6 @@
 
 # requires python 3.8
 
-# dependacies 
-
 # pip install matplotlib
 # pip install xlsxwriter
 
@@ -20,4 +18,5 @@ the file with gps coordenates can take up to 3 gps points
 4) press enter 
 
 # File type:
-# "example.gps" contains format: "lat1, long1:lat2, long2" such as "39.014095, -9.322054:38.947374, -9.304201"
+# "example.gps" 
+contains format: "lat1, long1:lat2, long2" such as "39.014095, -9.322054:38.947374, -9.304201"
